@@ -109,8 +109,7 @@ footer {
 }
 
 main {
-    width: 940px;
-    margin: 0 auto;
+    
 }
 
 form {
@@ -176,12 +175,32 @@ th {
     width: 100%;
 }
 
-/*não usar nomes específicando comportamento para facilitar alterações futuras*/
+/*Não usar nomes específicando um comportamento para facilitar alterações futuras*/
 .titulo-principal {
     text-align: center;
     font-size: 2em; /*em é a medida proporcional para pixels (2em = dobro do tamanho da fonte padrão*/
     margin: 0 0 1em;
     clear: left;
+}
+
+/*Tag: .titulo-principal | pseudo-classe: first-letter
+.titulo-principal:first-letter {
+    font-weight: bold;
+}
+
+/*Ater e before são pseudo-elementos que criam espaço (conteúdo de exibição) antes e depois do conteúdo
+.titulo-principal::before {
+    content: "[ ";
+}
+.titulo-principal::after {
+    content: " ]";
+} Código comentado para futuras consultas*/
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal p {
@@ -204,6 +223,12 @@ th {
 
 .mapa {
     padding: 3m 0;
+    background: linear-gradient(#FEFEFE, #888888);/*Usando o parâmetro 45deg antes da primeira propriedade muda-se a angulação. Podemos usar porcentagem para alterar o tamanho que cada cor ocupará. Outra opção radial-gradient*/
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
 }
 
 .mapa p {
@@ -213,6 +238,7 @@ th {
 
 .beneficios {
     padding: 3em 0;
+    background: #888888;
 }
 
 .conteudo-beneficios {
@@ -232,6 +258,10 @@ th {
 
 .itens:first-child {/*pseudo classe para escolher o 1° parágrafo, last-child p/ último e nth-child(4) p/ o 4° elemento da lista ou ainda p/ elementos pares usamos nth-child(2n)*/
     font-weight: bold;
+}
+
+.itens:before {
+    content: "♤";
 }
 
 .imagem-beneficios {
