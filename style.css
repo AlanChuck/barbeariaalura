@@ -108,10 +108,6 @@ footer {
     margin: 20px 0 0;
 }
 
-main {
-    
-}
-
 form {
     margin: 40px 0;
 }
@@ -306,3 +302,22 @@ Seletor de exclusão - usando o identificador id="missao", seleciona todos os pa
     background: orange;
 }*/
 
+/*Acrescenta um Media Query, criando um padrão alternativo para outras dimensões (responsividade)*/
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+
+    }
